@@ -1,16 +1,20 @@
 /** @type {import('next').NextConfig} */
+const repoName = "subupeeInfotechPortfolio";
+
 const nextConfig = {
   output: "export",
 
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`,
+
+  trailingSlash: true,
 
   images: {
     unoptimized: true,
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-    ],
+  },
+
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 
